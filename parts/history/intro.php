@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="large-6 columns">
+        <h1>History of Type</h1>
+        <p>We learn the canon of typography through a historical context. An understanding of history is essential for understanding typography contextually. To understand, use, or learn typography, you must first understand the origin, purpose, and why the canon of typography was developed in the first place. This understanding allows us to expand upon what we know, avoid the same mistakes, and transition into new technologies. As Richard Hollis wrote: “Eyes and brains have worked the same way over generations&hellip;the environment changes but the principles of visual communication survive. History helps us understand these principles.”. Understanding the context of typographic principles allow us to see similar contexts today and rather than reinvent the wheel, extend and adapt collective knowledge.<p> 
+        <p>Any significant shift in typography runs parallel to new reading environments, technologies or social change; printing and paper-making, for example, developed simultaneously. As humans and technology advance, new ways of communication emerge, and the message and means of production change. Every change in production guided the development of new approaches to visual communication. Looking back on typography's long history, it is abundantly clear that practice responds to new technologies.</p>
+        
+    </div>
+</div>

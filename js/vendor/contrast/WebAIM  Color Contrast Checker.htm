@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Color Contrast Checker</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="jquery.js"></script>	
+<style type="text/css">
+body, html { 
+	background-color:transparent; 
+	font-size:14pt;
+}
+h1, h2, h3, h4, h5, p { 
+	font-family: 'Open Sans', sans-serif; 
+	color:#274245;
+}
+h1, h2, h3, h4, h5 { 
+	font-weight: 700; 
+	font-size:16pt;
+}
+a:link {
+    color: #274245;
+	text-decoration:none;
+	font-weight:700;
+	min-width:44px;
+	text-align:center;
+	display:inline-block;
+	font-weight:700;
+  	background-color: #a7dbd8;
+ 	 border: none;
+  	color:#274245;
+  	text-decoration:none;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+	
+}
+
+input {
+    width: 75px;
+	min-height:24px
+}
+a:visited {
+    color: #274245;
+}
+a:hover {
+    color: #222;
+}
+a:active {
+    color: #d77a44;
+}
+#normal {
+	border:1px solid black;
+	padding:1px 5px;
+	font-size:14pt;
+	display:inline-block;
+}
+#big {
+	font-size:20pt;
+	font-weight:bold;
+	border:1px solid black;
+	padding:1px 5px;
+	display:inline-block;
+}
+.pass {
+	font-weight:bold;
+	color:#080;
+}
+.fail {
+	font-weight:bold;
+	color:#c00;
+}
+#fg {
+	display:inline-block;
+	width:24px;
+	vertical-align: text-top;
+	height:24px;
+	border:1px dashed #ccc;
+	margin-right:6px;
+}
+#bg {
+	display:inline-block;
+	vertical-align: text-top;
+	width:24px;
+	height:24px;
+	border:1px dashed #ccc;
+	margin-right:6px;
+}
+</style>
+<script type="text/javascript" src="contrastchecker.js"></script>
+<script type="text/javascript" src="jscolor.js"></script>
+</head>
+<body>
+<h1>Contrast Ratio Test</h1>
+<form method="post" action="">
+<p><label for="foreground">Foreground</label>: #<input autocomplete="off" name="foreground" id="foreground" value="274245" class="color {hash:false,caps:false,styleElement:'fg',pickerPosition:'top'}}" type="text">
+<span style="background-color: rgb(62, 62, 255); color: rgb(255, 255, 255);" id="fg"></span> <a href="" id="fglighten" onclick="changehue('foreground', 'lighten'); return false;">+</a>
+<a href="#" id="fgdarken" onclick="changehue('foreground', 'darken'); return false;">-</a>
+</p>
+<p><label for="background">Background</label>: #<input autocomplete="off" name="background" id="background" value="f7f6f2" class="color {hash:false,caps:false,styleElement:'bg'}}" type="text">
+  <span style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="bg"></span> <a href="#" id="bglighten" onClick="changehue('background', 'lighten'); return false;">+</a> <a href="#" id="bgdarken" onClick="changehue('background', 'darken'); return false;">-</a></p>
+</form>
+<p>Contrast Ratio: <strong><span id="contrastratio">6.29:1</span></strong></p>
+<div style="color: rgb(62, 62, 255); background-color: rgb(255, 255, 255);" id="normal">Normal Text 16px</div>
+<p>WCAG AA: <span id="normalaa" class="pass">Pass</span><br>
+WCAG AAA: <span id="normalaaa" class="fail">Fail</span><br>
+</p>
+<div style="color: rgb(62, 62, 255); background-color: rgb(255, 255, 255);" id="big">Big Text 20px</div>
+<p>WCAG AA: <span id="bigaa" class="pass">Pass</span><br>
+WCAG AAA: <span id="bigaaa" class="pass">Pass</span><br>
+
+</p>
+
+</body>
+</html>
